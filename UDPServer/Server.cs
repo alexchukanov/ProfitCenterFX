@@ -41,7 +41,7 @@ namespace UDPServ
  
                 IPEndPoint ep = new IPEndPoint(broadcast, 11000);
 
-                if  (price < emulLostLevel)  //emulLostLevel = 2, no lost packets
+                if  (price < emulLostLevel) //emulLostLevel = 2, no lost packets
                 {
                     s.SendTo(sendbuf, ep);
                     Console.WriteLine($"sent: N={n}, price={price}");
